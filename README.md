@@ -4,7 +4,8 @@
 I have one big script for this project and I explain step by step what the code does below. 
 The tried to follow the assignment instructions carefully but the one place where I took some liberty with how I interpreted them is in Step 2. I interpreted Step 2's requirement to extract only the mean and standard deviation values for each "measurement" to refer to the mean and standard deviation for the actual measured variables among the 561 'features.' 
 Looking at the README for the data and the "Relevant Papers" on the website for the data, I think that
-the features ending in 'jerk' or 'mag' or beginning with 'f' or 'angle,' were all calculated, so I excluded those.
+the features ending in 'jerk' or 'mag' or beginning with 'f' or 'angle,' were all calculated, so I excluded those. The body motion and gravitational signals in the time domain from the accelerometer and gyroscope were the measurements to which the mean and standard deviation were applied in the activity recognition process in the 2013 Journal of Universal Computer Science paper, http://goo.gl/KWvKbs, (see in particular Figure 3). 
+One other thing I want to note is that I didn't break up the variable names into their component parts (feature, axis, measure), even though it seemed like tidy data demanded that. David Hood's FAQ recommended against decomposing the variable names, and pointed out that if you try that you'll end up with lots and lots of NAs, which is usually a sign that the data isn't organized well. 
 
 Other than that I think my process was pretty straightforward:
 I downloaded and read the files, except the inertial signals as David Hood suggested in 

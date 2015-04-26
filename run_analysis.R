@@ -51,4 +51,9 @@ names(measure) <- newnames
 table <- tbl_df(measure)
 bySubAct <- group_by(measure, subjectid, activity)
 averageByGroup <- summarise_each(bySubAct, funs(mean), vars = -c(subjectid, activity))
-View(averageByGroup)
+
+samsungDataSet <- mutate(averageByGroup, activity = as.character(activity)) %>% 
+mutate(activity = tolower(activity)) %>% 
+mutate(activity = sub("_", "", activity)) %>%
+mutate(activity = as.factor(activity))
+View(samsungDataSet)

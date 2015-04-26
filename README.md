@@ -152,5 +152,13 @@ names(measure) <- newnames
 ### Step 5 find average of each variable for each subject and each activity and store in a tidy dataset
 table <- tbl_df(measure)
 bySubAct <- group_by(measure, subjectid, activity)
-avergeByGroup <- summarise_each(bySubAct, funs(mean), vars = -c(subjectid, activity))
+averageByGroup <- summarise_each(bySubAct, funs(mean), vars = -c(subjectid, activity))
+
+after watching the week 4 lecture I realized I should change the activity names to lower case and get rid of the underscores.
+
+## clean up activity names based on lecture 4 (conventions for text variables)
+samsungDataSet <- mutate(averageByGroup, activity = as.character(activity)) %>% 
+mutate(activity = tolower(activity)) %>% 
+mutate(activity = sub("_", "", activity)) %>%
+mutate(activity = as.factor(activity))
                  

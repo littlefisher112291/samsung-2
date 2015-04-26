@@ -1,11 +1,12 @@
-#Codebook for samsung dataset on https://github.com/postess/samsung
+#Codebook 
+## for samsung dataset on https://github.com/postess/samsung
 
 The samsung data set is a subset of the public Human Activity Recognition database built by Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz and available on the UCI Machine Learning Repository.
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 The source data’s README file explains how the data was collected and presented and this code book explains the subset of that data on my github repo, https://github.com/postess/samsung.
 
-1) Source Data Description from HAR README file:
+### 1) Source Data Description from HAR README file:
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. NOTE: In the samsung dataset, I merged the train and test datasets into one dataset. 
 
@@ -78,9 +79,7 @@ tBodyAccJerkMean
 tBodyGyroMean
 tBodyGyroJerkMean
 
-
-
-2) Data dictionary for this samsung dataset
+### 2) Data dictionary for this samsung dataset
 
 To create the samsung dataset I worked with the 561-feature vector as variables and did not include any inertial signals data. The subjects were volunteers in the study and each one performed each activity several times. This dataset extracts the mean and standard deviation for the time domain signals collected by the smartphone accelerometer and gyroscope for each subject performing each activity, and then shows the means of each mean and standard deviation measure. 
 The time signals for linear acceleration and angular velocity (from the gyroscope) are the ‘raw data’—actual measurements—from which other variables, like jerk and magnitude, were calculated. This dataset only includes those time domain measurements, which are described in detail below.
@@ -97,97 +96,96 @@ Indicates which activity of daily living was performed in the observation.
 The volunteers performed six activities: laying, sitting, standing, walking, walking downstairs, and walking upstairs. Each activity was identified by a number between 1 and 6 in the activity_labels.txt file. I used the numeric vector from y_train and y_test to identify activities for each observation in the full dataset and changed the numbers to names using activity_labels.txt.
 
 
-bodymotionaccelerationtimesignalmeanx
+meanofbodymotionaccelerationtimesignalmeanx
 
 Unit: standard gravity units
 Description: The tBodyAcc-mean()-X feature in the source dataset estimated the mean for the time domain body motion acceleration signals for the x-axis. This column in the samsung dataset is the mean of those means for each subject performing each activity.
 
-bodymotionaccelerationtimesignalmeany 
+meanofbodymotionaccelerationtimesignalmeany 
 
 Unit: standard gravity units
 Description: The tBodyAcc-mean()-Y feature in the source dataset estimated the mean for the time domain body motion acceleration signals for the y-axis. This column in the samsung dataset is the mean of those means for each subject performing each activity.
 
-bodymotionaccelerationtimesignalmeanz
+meanofbodymotionaccelerationtimesignalmeanz
 
 Unit:  standard gravity units
 Description: The tBodyAcc-mean()-Z feature in the source dataset estimated the mean for the time domain body motion acceleration signals for the z-axis. This column in the samsung dataset is the mean of those means for each subject performing each activity.
 
-gravitationalaccelerationtimesignalmeanx 
+meanofgravitationalaccelerationtimesignalmeanx 
 
 Unit: standard gravity units
 Description: The tGravityAcc-mean()-X feature in the source dataset estimated the mean for the time domain gravitational acceleration signals on the x-axis, collected by the smarthphone accelerometer. This column in the samsung dataset is the mean of those means for each subject performing each activity.
 
-gravitationalaccelerationtimesignalmeany 
+meanofgravitationalaccelerationtimesignalmeany 
 
 Unit: standard gravity units
 Description: The tGravityAcc-mean()-Y feature in the source dataset estimated the mean for the time domain gravitational acceleration signals on the y-axis, collected by the smarthphone accelerometer. This column in the samsung dataset is the mean of those means for each subject performing each activity.
 
-gravitaitonalaccelerationtimesignalmeanz
+meanofgravitaitonalaccelerationtimesignalmeanz
 
 Unit: standard gravity units
 Description: The tGravityAcc-mean()-Z feature in the source dataset estimated the mean for the time domain gravitational acceleration signals on the z-axis, collected by the smarthphone accelerometer. This column in the samsung dataset is the mean of those means for each subject performing each activity.
 
-bodymotiongyroscopictimesignalmeanx
+meanofbodymotiongyroscopictimesignalmeanx
 
 Unit: radians per seconds
 Description: The tBodyGyro-mean()-X feature in the source dataset estimated the mean for the time domain body motion angular velocity signals on the x-axis collected by the smartphone gyroscope. This column in the samsung dataset is the mean of those means for each subject performing each activity.
 
-bodymotiongyroscopictimesignalmeany 
+meanofbodymotiongyroscopictimesignalmeany 
 
 Unit: radians per seconds
 Description: The tBodyGyro-mean()-Y feature in the source dataset estimated the mean for the time domain body motion angular velocity signals on the y-axis, collected by the smartphone gyroscope. This column in the samsung dataset is the mean of those means for each subject performing each activity.
 
-bodymotiongyroscopictimesignalmeanz
+meanofbodymotiongyroscopictimesignalmeanz
 
 Unit: radians per seconds
 Description: The tBodyGyro-mean()-Z feature in the source dataset estimated the mean for the time domain body motion angular velocity signals on the z-axis, collected by the smartphone gyroscope. This column in the samsung dataset is the mean of those means for each subject performing each activity.
 
-bodymotionaccelerationtimesignalstandarddeviationx
+meanofbodymotionaccelerationtimesignalstandarddeviationx
 
 Unit: standard gravity units
 Description: The tBodyAcc-std()-X feature in the source dataset estimated the standard deviation for the time domain body motion acceleration signals on the x-axis, collected by the smarthphone accelerometer. This column in the samsung dataset is the mean of those standard deviations for each subject performing each activity.
 
-bodymotionaccelerationtimesignalstandarddeviationy 
+meanofbodymotionaccelerationtimesignalstandarddeviationy 
 
 Unit: standard gravity units
 Description: The tBodyAcc-std()-Y feature in the source dataset estimated the standard deviation for the time domain body motion acceleration signals on the y-axis, collected by the smarthphone accelerometer. This column in the samsung dataset is the mean of those standard deviations for each subject performing each activity.
 
-bodymotionaccelerationtimesignalstandarddeviationz
+meanofbodymotionaccelerationtimesignalstandarddeviationz
 
 Unit: standard gravity units
 Description: The tBodyAcc-std()-Z feature in the source dataset estimated the standard deviation for the time domain body motion acceleration signals on the z-axis, collected by the smarthphone accelerometer. This column in the samsung dataset is the mean of those standard deviations for each subject performing each activity.
 
-gravitationalaccelerationtimesignalstandarddeviationx
+meanofgravitationalaccelerationtimesignalstandarddeviationx
 
 Unit: standard gravity units
 Description: The tGravityAcc-std()-X feature in the source dataset estimated the standard deviation for the time domain gravitational acceleration signals on the x-axis, collected by the smarthphone accelerometer. This column in the samsung dataset is the mean of those standard deviations for each subject performing each activity.
 
-gravitationalaccelerationtimesignalstandarddeviationy
+meanofgravitationalaccelerationtimesignalstandarddeviationy
 
 Unit: standard gravity units
 Description: The tGravityAcc-std()-Y feature in the source dataset estimated the standard deviation for the time domain gravitational acceleration signals on the y-axis, collected by the smarthphone accelerometer. This column in the samsung dataset is the mean of those standard deviations for each subject performing each activity.
 
-gravitationalaccelerationtimesignalstandarddeviationz 
+meanofgravitationalaccelerationtimesignalstandarddeviationz 
 
 Unit: standard gravity units
 Description: The tGravityAcc-std()-Z feature in the source dataset estimated the standard deviation for the time domain gravitational acceleration signals on the z-axis, collected by the smarthphone accelerometer. This column in the samsung dataset is the mean of those standard deviations for each subject performing each activity.
 
-bodymotiongyroscopictimesignalstandarddeviationx
+meanofbodymotiongyroscopictimesignalstandarddeviationx
 
 Unit: radians per seconds
 Description: The tBodyGyro-std()-X feature in the source dataset estimated the standard deviation for the time domain body motion angular velocity signals on the x-axis, collected by the smartphone gyroscope. This column in the samsung dataset is the mean of those standard deviations for each subject performing each activity.
 
-bodymotiongyroscopictimesingalstandarddeviationy
+meanofbodymotiongyroscopictimesingalstandarddeviationy
 
 Unit: radians per seconds
 Description: The tBodyGyro-std()-Y feature in the source dataset estimated the standard deviation for the time domain body motion angular velocity signals on the y-axis, collected by the smartphone gyroscope. This column in the samsung dataset is the mean of those standard deviations for each subject performing each activity.
 
 
-bodymotiongyroscopictimesignalstandarddeviationz
+meanofbodymotiongyroscopictimesignalstandarddeviationz
 
 Unit: radians per seconds
 Description: The tBodyGyro-std()-Z feature in the source dataset estimated the standard deviation for the time domain body motion angular velocity signals on the z-axis, collected by the smartphone gyroscope. This column in the samsung dataset is the mean of those standard deviations for each subject performing each activity.
-
 
 
 citation:

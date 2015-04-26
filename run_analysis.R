@@ -44,7 +44,7 @@ labeledData <- mutate(meanStd, Activity = labelData)
 
 measure <- select(labeledData, -contains("jerk"), -contains("mag"), -starts_with("f"), -starts_with("angle"))
 
-newnames <- c("subjectid", "activity", "meanbodyaccelx", "meanbodyaccely", "meanbodyaccelz", "meangravityaccelx", "meangravityaccely", "meangravityaccelz", "meanbodygyrox", "meanbodygyroy", "meanbodygyroz", "stdvbodyaccelx", "stdvbodyaccely", "stdvbodyaccelz", "stdvgravityaccelx", "stdvgravityaccely", "stdvgravityaccelz", "stdvbodygyrox", "stdvbodygyroy", "stdvbodygyroz")
+newnames <- c("subjectid", "activity", "bodymotionaccelerationtimesignalmeanx", "bodymotionaccelerationtimesignalmeany", "bodymotionaccelerationtimesignalmeanz", "gravitationalaccelerationtimesignalmeanx", "gravitationalaccelerationtimesignalmeany", "gravitaitonalaccelerationtimesignalmeanz", "bodymotiongyroscopictimesignalmeanx", "bodymotiongyroscopictimesignalmeany", "bodymotiongyroscopictimesignalmeanz", "bodymotionaccelerationtimesignalstandarddeviationx", "bodymotionaccelerationtimesignalstandarddeviationy", "bodymotionaccelerationtimesignalstandarddeviationz", "gravitationalaccelerationtimesignalstandarddeviationx", "gravitationalaccelerationtimesignalstandarddeviationy", "gravitationalaccelerationtimesignalstandarddeviationz", "bodymotiongyroscopictimesignalstandarddeviationx", "bodymotiongyroscopictimesingalstandarddeviationy", "bodymotiongyroscopictimesignalstandarddeviationz")
 
 names(measure) <- newnames
 

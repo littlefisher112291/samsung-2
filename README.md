@@ -154,9 +154,8 @@ table <- tbl_df(measure)
 bySubAct <- group_by(measure, subjectid, activity)
 averageByGroup <- summarise_each(bySubAct, funs(mean), vars = -c(subjectid, activity))
 
-after watching the week 4 lecture I realized I should change the activity names to lower case and get rid of the underscores.
+After watching the week 4 lecture I realized I should change the activity names to lower case and get rid of the underscores.
 
-clean up activity names based on lecture 4 (conventions for text variables)
 samsungDataSet <- mutate(averageByGroup, activity = as.character(activity)) %>% 
 mutate(activity = tolower(activity)) %>% 
 mutate(activity = sub("_", "", activity)) %>%

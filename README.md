@@ -1,13 +1,15 @@
 # samsung
 ## Coursera Getting and Cleaning Data Course Project
 
+Thanks for reviewing my course project! 
 I have one big script for this project and I explain step by step what the code does below. 
 The tried to follow the assignment instructions carefully but the one place where I took some liberty with how I interpreted them is in Step 2. I interpreted Step 2's requirement to extract only the mean and standard deviation values for each "measurement" to refer to the mean and standard deviation for the actual measured variables among the 561 'features.' 
 Looking at the README for the data and the "Relevant Papers" on the website for the data, I think that
-the features ending in 'jerk' or 'mag' or beginning with 'f' or 'angle,' were all calculated, so I excluded those. The body motion and gravitational signals in the time domain from the accelerometer and gyroscope were the measurements to which the mean and standard deviation were applied in the activity recognition process in the 2013 Journal of Universal Computer Science paper, http://goo.gl/KWvKbs, (see in particular Figure 3). 
-One other thing I want to note is that I didn't break up the variable names into their component parts (feature, axis, measure), even though it seemed like tidy data demanded that. David Hood's FAQ recommended against decomposing the variable names, and pointed out that if you try that you'll end up with lots and lots of NAs, which is usually a sign that the data isn't organized well. 
+the features ending in 'jerk' or 'mag' or beginning with 'f' or 'angle,' were all calculated, so I excluded those. The body motion and gravitational signals in the time domain from the accelerometer and gyroscope were the measurements to which the mean and standard deviation were applied in the activity recognition process in the 2013 Journal of Universal Computer Science paper, http://goo.gl/KWvKbs, (see in particular Figure 3). My thinking was that we don't have a research question to answer, so we have some flexibility to imagine how we might be using it and let that guide our data manipulation. 
+One other thing I want to note is that I didn't break up the variable names into their component parts (feature, axis, measure), even though it seemed like tidy data demanded that. David Hood's FAQ recommended against decomposing the variable names, and pointed out that if you try that you'll end up with lots and lots of NAs, which is usually a sign that the data isn't organized well. Given that, I'd argue that the data set is tidy insofar as each column has one variable (though each variable is a mean of a mean or of standard deviation of a series of readings from a smartphone), and each row is an observation for a subject performing one of the activities in the study. 
+That said, I'm very new to command line programming and still a novice at data analysis, so I welcome any advice and criticism. I plan to keep working on this to try to get it right (and tidier) after I submit, so I'll use any feedback you have. 
 
-Other than that I think my process was pretty straightforward:
+Other than those points I think my process was pretty straightforward:
 I downloaded and read the files, except the inertial signals as David Hood suggested in 
 "David's personal course project FAQ."
 I started to merge the test and train datasets by cbinding the subject and activity (y files) columns to the X_train and X_test tables.
